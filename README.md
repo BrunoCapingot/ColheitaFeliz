@@ -1,4 +1,4 @@
-"""
+
 
 ##Colheita Feliz
 Este é um jogo chamado "Colheita Feliz" que foi modelado em MVC (Model-View-Controller) e desenvolvido por [seu nome aqui]. O objetivo do jogo é gerenciar uma fazenda virtual, plantar e colher plantações, criar animais e gerenciar o lucro da sua fazenda.
@@ -38,4 +38,3 @@ Este jogo é distribuído sob a licença [inserir licença aqui]. Consulte o arq
 
 Autor
 Desenvolvido por [seu nome aqui]. Entre em contato em [seu email aqui].
-"""
