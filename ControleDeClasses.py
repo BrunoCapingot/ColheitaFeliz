@@ -13,17 +13,39 @@ class ControleDeClasses():
     print("Jogue por meio da seleção numerica do teclado que contem como valor o item que você deseja!")
     self.opr = 0
     self.validadeDeOperacaes = False
-    self.numEtapa = 0
-    self.opcao = None
+    self.etapa = Etapa()
     while self.opr != -69:
-      self.etapa = Etapa()
+
       self.etapa.printar_opcao()
-      self.etapa.setar_etapa(self.numEtapa)
-
       self.recebeOperacao()
-      self.validadorDeOperacacao()
-      self.validadorDeEtapa()
+      self.validarOperacao()
+      self.operacaoEtapa()
 
+
+  def operacaoEtapa(self):
+    if self.etapa.puxar_etapa() >= 0:
+      if self.validadeDeOperacaes == True:
+        self.etapa.proximaEtapa()
+      else:
+        self.etapa.etapaAnterior()
+
+  def recebeOperacao(self):
+    self.opr = int(input())
+
+  def validarOperacao(self):
+
+    if self.opr >= 0 and self.opr <= len(self.etapa.puxar_opcao())-1:
+      print("Operador dentro do intervalo")
+      self.validadeDeOperacaes = True
+    else:
+      print("Operador fora do intervalo")
+      self.validadeDeOperacaes = False
+
+
+
+
+
+"""
   def validadorDeEtapa(self):
     self.opcao = self.etapa.puxar_opcao()
     print(len(self.opcao))
@@ -36,8 +58,7 @@ class ControleDeClasses():
       self.validadeDeOperacaes == False
       self.numEtapa = self.numEtapa - 1
       print(self.numEtapa)
-  def recebeOperacao(self):
-    self.opr = int(input())
+
   def validadorDeOperacacao(self):
     etapa = self.etapa.puxar_etapa()
     opcoes = self.etapa.puxar_opcao()
@@ -47,7 +68,7 @@ class ControleDeClasses():
     else:
       self.validadeDeOperacaes = False
       print('Nao validado')
-
+"""
 
 if __name__ == "ControleDeClasses":
   ControleDeClasses()
