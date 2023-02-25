@@ -1,1 +1,10 @@
 site_name: My Docs
+
+.nav:
+  - Home : index.md
+  - Controle de Classes  : controleDeClasses.md
+
+
+
+scripts:
+  -mkdocstrings
