@@ -19,6 +19,9 @@ class ControleDeClasses():
     """
 
     def __init__(self):
+        """
+            Inicializa a classe e o jogo, apresentando as instruções iniciais para o usuário.
+        """
         print("Colheita Condicional")
         print("Jogue por meio da seleção numerica do teclado que contem como valor o item que você deseja!")
         self.opr = 0
@@ -28,7 +31,6 @@ class ControleDeClasses():
             self.etapa.printar_opcao()
             self.recebeOperacao()
             self.validarOperacao()
-            print(self.etapa.puxar_etapa())
             self.operacaoEtapa()
 
     def operacaoEtapa(self):
@@ -43,23 +45,23 @@ class ControleDeClasses():
                 self.etapa.etapaAnterior()
 
 
-def recebeOperacao(self):
-    """
-        Solicita ao usuário que informe uma operação.
-    """
-    self.opr = int(input())
+    def recebeOperacao(self):
+        """
+            Solicita ao usuário que informe uma operação.
+        """
+        self.opr = int(input())
 
 
-def validarOperacao(self):
-    """
-       Verifica se a operação selecionada pelo usuário é válida ou não.
-    """
-    if self.opr >= 0 and self.opr <= len(self.etapa.puxar_opcao()) - 1:
-        print("Operador dentro do intervalo")
-        self.validadeDeOperacaes = True
-    else:
-        print("Operador fora do intervalo")
-        self.validadeDeOperacaes = False
+    def validarOperacao(self):
+        """
+           Verifica se a operação selecionada pelo usuário é válida ou não.
+        """
+        if self.opr >= 0 and self.opr <= len(self.etapa.puxar_opcao()) - 1:
+            print("Operador dentro do intervalo")
+            self.validadeDeOperacaes = True
+        else:
+            print("Operador fora do intervalo")
+            self.validadeDeOperacaes = False
 
 
 """
