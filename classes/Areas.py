@@ -1,3 +1,3 @@
-class Area:
+class Area():
     def __init__(self):
         pass

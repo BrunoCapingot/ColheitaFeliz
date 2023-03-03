@@ -91,5 +91,4 @@ class ControleDeClasses():
       print('Nao validado')
 """
 
-if __name__ == "ControleDeClasses":
-    ControleDeClasses()
+ControleDeClasses()
