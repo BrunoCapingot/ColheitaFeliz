@@ -1,6 +1,5 @@
 
 from Model import Modelo
-from View import Visualizacao
 
 
 class ControleDeClasses():
@@ -22,31 +21,31 @@ class ControleDeClasses():
         """
             Inicializa a classe e o jogo, apresentando as instruções iniciais para o usuário.
         """
-        self.impressao = Visualizacao()
         self.etapa = Modelo()
 
-        self.impressao.ImprimirIndroducao()
         self.opr = 0
         self.validadeDeOperacaes = False
 
 
         while self.opr != -69:
-            self.impressao.ImprimirDados(self.etapa.get_opcaoValida())
+            self.etapa.visualizarEstruturaEtapa()
             self.recebeOperacao()
             self.validarOperacao()
             self.operacaoEtapa()
+
 
     def operacaoEtapa(self):
         """
         Realiza a operação de avançar ou retroceder uma etapa,
          dependendo da validade da operação selecionada.
         """
-        if self.etapa.get_etapa() >= 0:
+        if self.etapa.setEtapaAtual() >= 0:
             if self.validadeDeOperacaes == True:
                 self.etapa.proximaEtapa()
             else:
-                if self.get_etapa != 0:
+                if self.etapa.getEtapa() != 0:
                     self.etapa.etapaAnterior()
+        else: pass
 
     def recebeOperacao(self):
         """
@@ -58,13 +57,7 @@ class ControleDeClasses():
         """
            Verifica se a operação selecionada pelo usuário é válida ou não.
         """
-        if self.opr >= 0 and self.opr <= len(self.etapa.get_opcaoValida()) - 1:
-            print("Operador dentro do intervalo")
-            self.validadeDeOperacaes = True
-        else:
-            print("Operador fora do intervalo")
-            self.validadeDeOperacaes = False
-
+        pass
 
 """
   def validadorDeEtapa(self):
