@@ -3,9 +3,6 @@ class Visualizacao():
         self.etapa = 0
         self.listaDeErros = [
             {0:"Operadores negativos não são Validos"},
-            [],
-            [],
-            []
         ]
 
         self.txtOperacoes = [
@@ -20,15 +17,15 @@ class Visualizacao():
             },
             {
                 0: "Desbloquar Areas", 1: "Construir", 2: "Atualizar Construções",
-                3: "Efetuar Pesquisas", 4: "Manejo de Plantaçoes", 5: "Listar Informações", 6: "Mudar Cenario",
-                7: "Sair do game"
+                3: "Efetuar Pesquisas", 4: "Manejo de Plantaçoes", 5: "Listar Informações",
+                6: "Mudar Cenario", 7: "Sair do game"
             }
         ]
 
 
 
     def proximaEtapa(self):
-        self.etapa += 1
+        self.etapa = self.etapa + 1
 
     def etapaAnterior(self):
         self.etapa -= 1
@@ -42,12 +39,10 @@ class Visualizacao():
     def imprimirOperacao(self):
         print(self.txtOperacoes[self.etapa])
 
-    def ImprimirIndroducao():
+    def ImprimirIndroducao(self):
         print("Colheita Condicional")
         print("Jogue por meio da seleção numerica do teclado que contem como valor o item que você deseja!")
 
     def Erros(self):
         print(self.listaDeErros[self.etapa])
 
-    def ImprimirDados(self,dado):
-        print(dado)

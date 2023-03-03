@@ -1,4 +1,3 @@
-
 from Model import Modelo
 
 
@@ -30,8 +29,8 @@ class ControleDeClasses():
         while self.opr != -69:
             self.etapa.visualizarEstruturaEtapa()
             self.recebeOperacao()
-            self.validarOperacao()
             self.etapa.setEtapaAtual()
+            self.validarOperacao()
             self.operacaoEtapa()
 
 
@@ -43,10 +42,6 @@ class ControleDeClasses():
         if self.etapa.getEtapa() >= 0:
             if self.validadeDeOperacaes == True:
                 self.etapa.proximaEtapa()
-            else:
-                if self.etapa.getEtapa() != 0:
-                    self.etapa.etapaAnterior()
-        else: pass
 
 
     def recebeOperacao(self):
@@ -59,7 +54,10 @@ class ControleDeClasses():
         """
            Verifica se a operação selecionada pelo usuário é válida ou não.
         """
-        pass
+        if self.etapa.getEtapa() >= 0 and self.etapa.getEtapa() < 10:
+            self.validadeDeOperacaes = True
+
+
 
 """
   def validadorDeEtapa(self):

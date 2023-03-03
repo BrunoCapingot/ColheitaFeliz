@@ -1,17 +1,14 @@
 from View import Visualizacao
-
+#Pensamento focado em 3 etapas
 
 class Modelo():
     def __init__(self):
         self.visualizar = Visualizacao()
-        self.etapa = []
+        self.operacao = []
     def setEtapaAtual(self):
         self.etapa = self.visualizar.visualizarEtapa()
     def visualizarEstruturaEtapa(self):
         self.visualizar.estruturaDaEtapa()
-
-    def proximaEtapa(self):
-        self.opcao = self.txtOperacoes[self.etapa]
 
     def etapaAnterior(self):
         self.visualizar.etapaAnterior()
