@@ -4,7 +4,6 @@ from View import Visualizacao
 class Modelo():
     def __init__(self):
         self.visualizar = Visualizacao()
-        self.operacao = []
     def setEtapaAtual(self):
         self.etapa = self.visualizar.visualizarEtapa()
     def visualizarEstruturaEtapa(self):
@@ -15,9 +14,6 @@ class Modelo():
 
     def proximaEtapa(self):
         self.visualizar.proximaEtapa()
-
-    def getOpcaoValida(self):
-        return self.txtOperacoes[self.etapa]
 
     def getEtapa(self):
         return self.etapa

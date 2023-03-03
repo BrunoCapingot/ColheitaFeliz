@@ -24,6 +24,8 @@ class Visualizacao():
 
 
 
+
+
     def proximaEtapa(self):
         self.etapa = self.etapa + 1
 
