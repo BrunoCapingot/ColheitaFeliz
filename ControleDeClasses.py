@@ -1,6 +1,6 @@
 
-from classes import classeEtapa
-from Impressao import ImpressaoGeral
+from Model import Etapa
+from View import ImpressaoGeral
 
 
 class ControleDeClasses():
@@ -26,7 +26,7 @@ class ControleDeClasses():
         self.impressao.ImprimirIndroducao()
         self.opr = 0
         self.validadeDeOperacaes = False
-        self.etapa = classeEtapa.Etapa()
+        self.etapa = Etapa()
 
 
         while self.opr != -69:
