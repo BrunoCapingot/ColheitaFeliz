@@ -1,5 +1,5 @@
-#from Banco import OperarBanco
-from classeEtapa import Etapa
+
+from classes import classeEtapa
 from Impressao import ImpressaoGeral
 
 
@@ -26,7 +26,7 @@ class ControleDeClasses():
         self.impressao.ImprimirIndroducao()
         self.opr = 0
         self.validadeDeOperacaes = False
-        self.etapa = Etapa()
+        self.etapa = classeEtapa.Etapa()
 
 
         while self.opr != -69:
