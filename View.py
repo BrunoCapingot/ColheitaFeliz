@@ -1,4 +1,4 @@
-class ImpressaoGeral():
+class Visualizacao():
     def __init__(self):
         self.dado = None
 

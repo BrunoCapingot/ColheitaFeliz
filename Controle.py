@@ -1,6 +1,6 @@
 
-from Model import Etapa
-from View import ImpressaoGeral
+from Model import Modelo
+from View import Visualizacao
 
 
 class ControleDeClasses():
@@ -22,11 +22,13 @@ class ControleDeClasses():
         """
             Inicializa a classe e o jogo, apresentando as instruções iniciais para o usuário.
         """
-        self.impressao = ImpressaoGeral()
+        self.impressao = Visualizacao()
+        self.etapa = Modelo()
+
         self.impressao.ImprimirIndroducao()
         self.opr = 0
         self.validadeDeOperacaes = False
-        self.etapa = Etapa()
+
 
 
         while self.opr != -69:

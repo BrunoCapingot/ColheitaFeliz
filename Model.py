@@ -1,6 +1,6 @@
 from classes import Ambiente
 
-class Etapa():
+class Modelo():
     def __init__(self):
         self.ambiente = Ambiente.Ambiente()
         self.etapa = 0
