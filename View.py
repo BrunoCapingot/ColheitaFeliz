@@ -26,6 +26,13 @@ class Visualizacao():
         ]
 
 
+
+    def proximaEtapa(self):
+        self.etapa += 1
+
+    def etapaAnterior(self):
+        self.etapa -= 1
+
     def estruturaDaEtapa(self):
         print(self.txtOperacoes[self.etapa])
 

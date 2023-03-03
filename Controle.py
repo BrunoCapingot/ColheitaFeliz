@@ -31,6 +31,7 @@ class ControleDeClasses():
             self.etapa.visualizarEstruturaEtapa()
             self.recebeOperacao()
             self.validarOperacao()
+            self.etapa.setEtapaAtual()
             self.operacaoEtapa()
 
 
@@ -39,13 +40,14 @@ class ControleDeClasses():
         Realiza a operação de avançar ou retroceder uma etapa,
          dependendo da validade da operação selecionada.
         """
-        if self.etapa.setEtapaAtual() >= 0:
+        if self.etapa.getEtapa() >= 0:
             if self.validadeDeOperacaes == True:
                 self.etapa.proximaEtapa()
             else:
                 if self.etapa.getEtapa() != 0:
                     self.etapa.etapaAnterior()
         else: pass
+
 
     def recebeOperacao(self):
         """

@@ -14,8 +14,10 @@ class Modelo():
         self.opcao = self.txtOperacoes[self.etapa]
 
     def etapaAnterior(self):
-        self.etapa -= 1
-        self.opcao = self.txtOperacoes[self.etapa]
+        self.visualizar.etapaAnterior()
+
+    def proximaEtapa(self):
+        self.visualizar.proximaEtapa()
 
     def getOpcaoValida(self):
         return self.txtOperacoes[self.etapa]
