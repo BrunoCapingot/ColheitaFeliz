@@ -1,8 +1,8 @@
-from Ambiente import Ambiente
+from classes import Ambiente
 
 class Etapa():
     def __init__(self):
-        self.ambiente = Ambiente()
+        self.ambiente = Ambiente.Ambiente()
         self.etapa = 0
         self.txtOperacoes = [{0: "Jogar", 1: "Sair", 2: "Alterar Configurações Padrão"},
                              {0: "Dinheiro Infinito(Criativo)", 1: "Dinheiro Zerado", 2: "Voltar"},
