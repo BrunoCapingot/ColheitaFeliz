@@ -5,6 +5,8 @@ class Visualizacao():
             {0:"Operadores negativos não são Validos"},
         ]
 
+
+
         self.txtOperacoes = [
             {
                 0: "Jogar", 1: "Sair", 2: "Alterar Configurações Padrão"
@@ -30,7 +32,7 @@ class Visualizacao():
         self.etapa = self.etapa + 1
 
     def etapaAnterior(self):
-        self.etapa -= 1
+        self.etapa = self.etapa - 1
 
     def estruturaDaEtapa(self):
         print(self.txtOperacoes[self.etapa])
