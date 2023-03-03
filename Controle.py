@@ -30,7 +30,6 @@ class ControleDeClasses():
         self.validadeDeOperacaes = False
 
 
-
         while self.opr != -69:
             self.impressao.ImprimirDados(self.etapa.get_opcaoValida())
             self.recebeOperacao()
