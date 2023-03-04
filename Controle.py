@@ -20,16 +20,15 @@ class ControleDeClasses():
         """
             Inicializa a classe e o jogo, apresentando as instruções iniciais para o usuário.
         """
-        self.etapa = Modelo()
-
+        self.modelo = Modelo()
         self.opr = 0
         self.validadeDeOperacaes = False
 
 
         while self.opr != -69:
-            self.etapa.visualizarEstruturaEtapa()
+            self.modelo.setEtapaAtual()
+            self.modelo.visualizarEstruturaEtapa()
             self.recebeOperacao()
-            self.etapa.setEtapaAtual()
             self.validarOperacao()
             self.operacaoEtapa()
 
@@ -39,9 +38,9 @@ class ControleDeClasses():
         Realiza a operação de avançar ou retroceder uma etapa,
          dependendo da validade da operação selecionada.
         """
-        if self.etapa.getEtapa() >= 0:
+        if self.modelo.getEtapa() >= 0:
             if self.validadeDeOperacaes == True:
-                self.etapa.proximaEtapa()
+                self.modelo.proximaEtapa()
 
 
     def recebeOperacao(self):
@@ -54,14 +53,13 @@ class ControleDeClasses():
         """
            Verifica se a operação selecionada pelo usuário é válida ou não.
         """
-        if self.etapa.getEtapa() >= 0 and self.etapa.getEtapa() < 10:
-            self.validadeDeOperacaes = True
+        self.validadeDeOperacaes = self.modelo.validarOperacao()
 
 
 
 """
   def validadorDeEtapa(self):
-    self.opcao = self.etapa.puxar_opcao()
+    self.opcao = self.modelo.puxar_opcao()
     print(len(self.opcao))
     if self.numEtapa >= 0 and self.numEtapa >= len(self.opcao):
       print(self.numEtapa)
@@ -74,8 +72,8 @@ class ControleDeClasses():
       print(self.numEtapa)
 
   def validadorDeOperacacao(self):
-    etapa = self.etapa.puxar_etapa()
-    opcoes = self.etapa.puxar_opcao()
+    etapa = self.modelo.puxar_etapa()
+    opcoes = self.modelo.puxar_opcao()
     if self.opr <= len(opcoes) - 1 and self.opr >= 0:
       print('validado')
       self.validadeDeOperacaes = True
