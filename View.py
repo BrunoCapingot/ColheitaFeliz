@@ -6,6 +6,7 @@ class Visualizacao():
         ]
 
         self.txtOperacoes = [
+
             {
                 0: "Jogar", 1: "Sair", 2: "Alterar Configurações Padrão"
             },
@@ -13,15 +14,26 @@ class Visualizacao():
             {
                 0: "Dinheiro Infinito(Criativo)", 1: "Dinheiro Zerado", 2: "Voltar"
             },
+
             {
                 0: "Entrar no game", 1: "Manutenção"
             },
-            {
-                0: "Desbloquar Areas", 1: "Construir", 2: "Atualizar Construções",
-                3: "Efetuar Pesquisas", 4: "Manejo de Plantaçoes", 5: "Listar Informações",
-                6: "Mudar Cenario", 7: "Sair do game"
-            }
+
+            [
+                {
+                    0: "Desbloquar Areas", 1: "Construir", 2: "Atualizar Construções",
+                    3: "Efetuar Pesquisas", 4: "Manejo de Plantaçoes", 5: "Listar Informações",
+                    6: "Mudar Cenario", 7: "Sair do game"
+                },
+                {
+                    0 : ""
+                }
             ]
+
+        ]
+
+
+
 
     def proximaEtapa(self):
         if self.etapa < len(self.txtOperacoes):

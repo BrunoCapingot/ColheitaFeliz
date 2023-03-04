@@ -5,6 +5,7 @@ class Modelo():
     def __init__(self):
         self.visualizar = Visualizacao()
         self.etapa = 0
+
     def setEtapaAtual(self):
         self.visualizar.visualizarEtapa()
 
@@ -16,9 +17,6 @@ class Modelo():
 
     def proximaEtapa(self):
         self.visualizar.proximaEtapa()
-
-    def getOpcaoValida(self):
-        return self.txtOperacoes[self.etapa]
 
     def getEtapa(self):
         return self.etapa

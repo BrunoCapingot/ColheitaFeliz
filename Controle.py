@@ -24,7 +24,6 @@ class ControleDeClasses():
         self.opr = 0
         self.validadeDeOperacaes = False
 
-
         while self.opr != -69:
             self.modelo.setEtapaAtual()
             self.modelo.visualizarEstruturaEtapa()
@@ -42,7 +41,6 @@ class ControleDeClasses():
             if self.validadeDeOperacaes == True:
                 self.modelo.proximaEtapa()
 
-
     def recebeOperacao(self):
         """
             Solicita ao usuário que informe uma operação.
@@ -54,8 +52,6 @@ class ControleDeClasses():
            Verifica se a operação selecionada pelo usuário é válida ou não.
         """
         self.validadeDeOperacaes = self.modelo.validarOperacao()
-
-
 
 """
   def validadorDeEtapa(self):
